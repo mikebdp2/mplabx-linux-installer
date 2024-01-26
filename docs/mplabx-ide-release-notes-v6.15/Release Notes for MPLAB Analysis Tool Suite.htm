@@ -1,0 +1,509 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>MPLAB Analysis Tool Suite Release Notes</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"MS Shell Dlg";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	margin:0in;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Computer, li.Computer, div.Computer
+	{mso-style-name:Computer;
+	mso-style-link:"Computer Char";
+	margin:0in;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	color:black;}
+span.ComputerChar
+	{mso-style-name:"Computer Char";
+	mso-style-link:Computer;
+	font-family:"Courier New";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:bold;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=Heading0>Release Notes for MPLAB<sup>®</sup> Analysis Tool Suite</p>
+
+<p class=MsoNormal style='margin-bottom:0in'>MPLAB X IDE v6.15</p>
+
+<p class=MsoNormal>August 17, 2023</p>
+
+<p class=Heading0>Table of Contents</p>
+
+<p class=MsoToc1><a href="#_Toc84938271">1<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Overview</a></p>
+
+<p class=MsoToc1><a href="#_Toc84938272">2<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>What’s
+New in this Release</a></p>
+
+<p class=MsoToc1><a href="#_Toc84938273">3<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Repairs
+and Enhancements Made in this Release</a></p>
+
+<p class=MsoToc1><a href="#_Toc84938274">4<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Known
+Problems</a></p>
+
+<h1>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><a name="_Toc84938271">Overview</a></h1>
+
+<p class=MsoNormal>MPLAB® Analysis Tool Suite is a collection of analysis tools
+integrated into the MPLAB X Integrated Development Environment (IDE). It supports
+all Microchip MCU, MPU and CEC devices and offers a code coverage feature and a
+Motor Industry Software Reliability Association (MISRA®) check in the IDE. </p>
+
+<p class=MsoNormal><a name="_Hlk90538485">The MPLAB Analysis Tool Suite requires
+Microsoft Windows® 10 or later, macOS® or the latest versions of Linux® (Ubuntu,
+Debian, Centos) operating systems in addition to the following:</a></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><a
+     href="https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide">MPLAB
+     X IDE</a> v6.00 or greater.</li>
+ <li class=MsoNormal>An <a
+     href="https://www.microchip.com/en-us/development-tool/SW006027-2">MPLAB
+     Analysis Tool Suite</a> license for workstation, server and HPA. Licenses
+     can be purchased on Microchip Direct (<a
+     href="https://www.microchipdirect.com/">https://www.microchipdirect.com/</a>).</li>
+ <li class=MsoNormal>An <a
+     href="https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers">MPLAB
+     XC C compiler</a> version, either FREE or PRO, that supports the MPLAB
+     Analysis Tool Suite: MPLAB XC8 v2.35, MPLAB XC16 v2.0, or MPLAB XC32 v4.0.</li>
+</ul>
+
+<h1><span style='color:windowtext'>2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Code Coverage</h1>
+
+<p class=MsoNormal>The code coverage feature provides visibility to the parts
+of your code that have been executed.</p>
+
+<p class=MsoNormal><b>Code Coverage Features</b>:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Fully Integrated into MPLAB X IDE</li>
+</ul>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Source code lines highlighted to show which
+lines executed or not</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Navigation tools that quickly move between
+files and functions</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Configurable Summary View</li>
+</ul>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Dashboards that quickly indicate key metrics</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Sortable, collapsible list of statement and
+instruction coverage</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Ability to see coverage percentage and number
+of executed and total lines</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Custom Reports</li>
+</ul>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Ability to output source files view and
+summary view information</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>User-selectable content</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Multiple output formats (HTML or CSV)</span></p>
+
+<p class=MsoNormal><b>Code Coverage on the Command Line</b>:</p>
+
+<p class=MsoNormal>When running the compilers with the MATS license on the
+command line, code coverage output is now available as of MPLAB X IDE v6.05.</p>
+
+<p class=MsoNormal>Please see the “<a
+href="https://onlinedocs.microchip.com/v2/keyword-lookup?redirect=true&amp;keyword=MPLAB_ANALYSIS_TOOL_SUITE">MPLAB
+Analysis Tool Suite User’s Guide</a>” (DS-50003236), 2.9 “Command Line Support
+for Code Coverage in MDB”.</p>
+
+<h1><a name="_Toc219602020"></a><a name="_Toc84938272">3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>MISRA Check</a></h1>
+
+<p class=MsoNormal>The MISRA check in the IDE provides guidelines and static
+code checking to ensure safe, secure, portable and reliable C/C++ code in
+embedded systems.</p>
+
+<p class=MsoNormal><b>MISRA Check Features</b>:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Fully Integrated into MPLAB X IDE</li>
+</ul>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Run static code analysis against MISRA C:2012
+rule set to ensure high code quality</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Execute MISRA checker from the MPLAB X IDE
+menus (as part of a post-build step) or from the command line</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>MISRA check a single file or entire project </span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>View violations to the MISRA rules in output
+view and navigate quickly and easily to the affected source code location </span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Configurable MISRA Check Tab View</li>
+</ul>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Option to select or deselect application of
+specific MISRA rules for all files</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Ability to add comments in code to disable a
+specific rule to a specific line of code</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Ability to save or restore selection of
+applied rule sets </span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Custom Reports</li>
+</ul>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Documentation of quality by creating reports</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Reports containing summary of rule violations
+with list of rules applied and checked </span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Ability to output reports in HTML or CSV</span></p>
+
+<h1>4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Thread Safety Check</h1>
+
+<p class=MsoNormal>The Thread Safety Check locates static local objects used by
+multiple threads.</p>
+
+<p class=MsoNormal><b>Thread Safety Check Features</b>:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Fully Integrated into MPLAB X IDE</li>
+</ul>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Execute Thread Safety checker from the MPLAB X
+IDE menus or from the command line</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>Thread Safety check a single file</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.75in;text-indent:-.25in;
+line-height:normal'><span lang=EN style='font-size:10.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='font-size:10.0pt'>View violations in output view</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1>5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>What’s New in this Release</h1>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Exclude files from MISRA analysis on the MISRA Check tab (<i><u>Tools&gt;Options&gt;Embedded</u></i>)
+     under “Additional Cppcheck arguments” or on the command line using <span
+     class=ComputerChar>--cppcheckArgs</span> (use <span class=ComputerChar>–-help</span>
+     for args) or <span class=ComputerChar>–-excludePattern</span>.</li>
+ <li class=MsoNormal>Thread Safety Check added.</li>
+ <li class=MsoNormal>Option to select source lines (Code) and output in HTML
+     format with Code Coverage information.</li>
+</ul>
+
+<h1><a name="_Toc84938273">6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Repairs and Enhancements Made</a> in this Release</h1>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Enabled highlighting and report production for Execution
+     Memory view in Code Coverage.</li>
+</ul>
+
+<h1><a name="_Toc84938274">7<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Known Problems</a></h1>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=125 valign=top style='width:94.1pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>SSR</b></p>
+  </td>
+  <td width=305 valign=top style='width:228.6pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Description</b></p>
+  </td>
+  <td width=160 valign=top style='width:120.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Device(s) Affected</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:94.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MPLABX-4736</p>
+  </td>
+  <td width=305 valign=top style='width:228.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Using macros causes code coverage to be associated with a
+  blank line in C code  </p>
+  </td>
+  <td width=160 valign=top style='width:120.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<h1 style='margin-left:0in;text-indent:0in'>&nbsp;</h1>
+
+</div>
+
+</body>
+
+</html>

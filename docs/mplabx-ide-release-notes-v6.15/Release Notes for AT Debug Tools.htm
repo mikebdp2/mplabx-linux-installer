@@ -1,0 +1,368 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>AT Debug Tools Release Notes</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"MS Shell Dlg";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	margin:0in;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=Heading0>Release Notes for AT Debug Tools</p>
+
+<p class=MsoNormal style='margin-bottom:0in'>MPLAB X IDE v6.15</p>
+
+<p class=MsoNormal>August 17, 2023</p>
+
+<p class=Heading0>Table of Contents</p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc47625409">1<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Overview</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc47625410">2<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>What’s New</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc47625411">3<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Repairs and Enhancements
+Made</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc47625412">4<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Known Problems</a></span></span></p>
+
+<h1>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Device Support</h1>
+
+<p class=MsoNormal>Click the link below to see device support.</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://packs.download.microchip.com/DeviceDoc/Device_Support.pdf">Device
+Support List</a></p>
+
+<h1>2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Atmel-ICE</h1>
+
+<p class=MsoNormal>Atmel-ICE (ATATMEL-ICE) is a powerful development tool for
+debugging and programming ARM® Cortex®-M based SAM microcontrollers and AVR®
+microcontrollers with On-Chip Debug (OCD) capability.</p>
+
+<p class=MsoNormal>For more information on this tool, see:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Product Webpage: <a
+     href="https://www.microchip.com/developmenttools/ProductDetails/ATATMEL-ICE">https://www.microchip.com/developmenttools/ProductDetails/ATATMEL-ICE</a></li>
+ <li class=MsoNormal>Developer Help: <a
+     href="https://microchipdeveloper.com/atmelice:start">https://microchipdeveloper.com/atmelice:start</a></li>
+ <li class=MsoNormal>In the IDE, <i><u>Help&gt;Help Contents&gt;Atmel-ICE
+     In-Circuit Debugger</u></i>.</li>
+</ul>
+
+<h1>3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Power Debugger</h1>
+
+<p class=MsoNormal>Power Debugger (atpowerdebugger) is a powerful development
+tool for debugging and programming AVR microcontrollers using UPDI, JTAG, PDI,
+debugWIRE, aWire, TPI or SPI target interfaces and ARM® Cortex®-M based SAM
+microcontrollers using JTAG or SWD target interfaces.</p>
+
+<p class=MsoNormal>For more information on this tool, see:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Product Webpage: <a
+     href="https://www.microchip.com/developmenttools/ProductDetails/atpowerdebugger">https://www.microchip.com/developmenttools/ProductDetails/atpowerdebugger</a></li>
+ <li class=MsoNormal>The <a
+     href="https://onlinedocs.microchip.com/pr/GUID-EAD481FD-28E6-4CD5-87FB-5165E7687C12-en-US-5/index.html">Power
+     Debugger WebHelp</a></li>
+</ul>
+
+<h1>4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Embedded Debugger</h1>
+
+<p class=MsoNormal>The Embedded Debugger (EDBG) is an onboard debugger for integration
+into development kits with AVR or SAM MCUs. EDBG enables debugging of a target
+device without an external debugger. The EDBG is embedded on all Xplained Pro
+evaluation kits, although not all functionality is available on all kits.</p>
+
+<p class=MsoNormal>For more information on this tool, see:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Xplained kits: <a href="https://www.microchip.com/xplained">https://www.microchip.com/xplained</a></li>
+ <li class=MsoNormal>The <a
+     href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42096-Microcontrollers-Embedded-Debugger_User-Guide.pdf">EDBG
+     User’s Guide</a> (PDF).</li>
+</ul>
+
+<h1>5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>SAM-ICE</h1>
+
+<p class=MsoNormal><b>End of life (EOL) product</b> and can no longer be ordered.
+For MPU and SAM developers, SAM-ICE has been replaced by the J-32 Debug Probe
+(DV164232). Alternatively, SAM developers can use either Atmel ICE
+(ATATMEL-ICE) or MPLAB ICD 4 (DV164045).</p>
+
+<p class=MsoNormal>SAM-ICE is a JTAG emulator designed for SAMA5, SAM3, SAM4,
+SAM7 and SAM9 ARM® core-based MCUs and MPUs, including Thumb mode.</p>
+
+<p class=MsoNormal>For more information on this tool, see:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Product Webpage: <a
+     href="https://www.microchip.com/developmenttools/ProductDetails/AT91SAM-ICE">https://www.microchip.com/developmenttools/ProductDetails/AT91SAM-ICE</a></li>
+ <li class=MsoNormal>OEM Information: <a
+     href="https://www.segger.com/products/debug-probes/j-link/models/other-j-links/j-link-oem-versions/">https://www.segger.com/products/debug-probes/j-link/models/other-j-links/j-link-oem-versions/</a></li>
+</ul>
+
+<h1><a name="_Toc219602020"></a><a name="_Toc47625410">6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>What’s New</a></h1>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>No new information on AT debug tool support.</p>
+
+<h1><a name="_Toc47625411">7<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Repairs and Enhancements Mad</a>e</h1>
+
+<p class=MsoNormal>None.</p>
+
+<h1><a name="_Toc47625412">8<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Known Problems</a></h1>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>SSR</b></p>
+  </td>
+  <td width=360 valign=top style='width:3.75in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Description</b></p>
+  </td>
+  <td width=174 valign=top style='width:130.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Device(s) Affected</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MPLABX-4687</p>
+  </td>
+  <td width=360 valign=top style='width:3.75in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>When powering target using Power Debugger and setting
+  voltage below 1.6 volts, an error is seen. Voltage should be set higher than
+  1.6 V.</p>
+  </td>
+  <td width=174 valign=top style='width:130.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>All</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
