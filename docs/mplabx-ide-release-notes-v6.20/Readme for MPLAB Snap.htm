@@ -1,0 +1,683 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>MPLAB Snap Release Notes</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"MS Shell Dlg";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:ArialMT;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:bold;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:2.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	margin:0in;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.ListBullet2NoSpace, li.ListBullet2NoSpace, div.ListBullet2NoSpace
+	{mso-style-name:"List Bullet 2 NoSpace";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in .75in 1.0in .75in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=Heading0>Release Notes for MPLAB<sup>®</sup> Snap<br>
+In-Circuit Debugger &amp; Device (Non-Production) Programmer</p>
+
+<p class=MsoNormal style='margin-bottom:0in'>MPLAB<sup><span style='font-size:
+12.0pt'>®</span></sup> X IDE v6.20</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>January 30, 2024</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>&nbsp;</p>
+
+<p class=Heading0>Table of Contents</p>
+
+<p class=MsoToc1><a href="#_Toc89412335">1<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Device
+Support</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412336">2<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Other
+Support</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412337">3<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Reference
+Documents</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412338">4<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>What's
+New in this Release</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412339">5<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Repairs
+and Enhancements Made in in this Release</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412340">6<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>USB
+Port Setup</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412341">7<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Powering
+the Debugger and Target Board</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412342">8<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Setting
+Up the Debugger and Target Board in MPLAB X IDE</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412343">9<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Virtual
+COM Port for AVR Devices</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412344">10<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Known
+Problems</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412345">11<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Important
+Notes</a></p>
+
+<p class=MsoToc1><a href="#_Toc89412346">12<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Reserved
+Resources</a></p>
+
+<h1 style='page-break-after:auto'>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><a name="_Ref123024713"></a><a name="_Toc89412335">Device Support</a></h1>
+
+<p class=MsoNormal>Click the link below to see device support for “Snap
+Debugging” (SnapD) and “Snap 4 Programming” (SnapP).</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://packs.download.microchip.com/DeviceDoc/Device_Support.pdf">Device
+Support List</a></p>
+
+<h2 style='page-break-after:auto'><a name="_Ref12886929">1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Programming
+Considerations</a></h2>
+
+<p class=MsoNormal>The MPLAB<span style='font-size:7.5pt'> </span>Snap
+In-Circuit Debugger is an ultra-low priced debugging solution for projects <b>not
+requiring high-voltage programming</b>.</p>
+
+<p class=MsoNormal><b>Firmware Upgrades</b>:</p>
+
+<p class=MsoNormal>The Bootloader does not yet support USB Full-speed mode.
+Therefore, you must use a High-speed USB port or hub for any IDE/IPE firmware
+updates to the tool.</p>
+
+<h2 style='page-break-after:auto'>1.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Debugging Considerations</h2>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'><span
+style='font-size:9.0pt;font-family:ArialMT;color:windowtext'>The MPLAB</span><span
+style='font-size:7.5pt;font-family:ArialMT;color:windowtext'> </span><span
+style='font-size:9.0pt;font-family:ArialMT;color:windowtext'>Snap In-Circuit
+Debugger is an ultra-low priced debugging solution for projects not requiring
+advanced debug features.</span></p>
+
+<p class=MsoNormal>MPLAB Snap does not support headers.</p>
+
+<h2>1.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Other Considerations</h2>
+
+<p class=MsoNormal><b>Important</b>: For low pin count AVR devices with UPDI,
+MPLAB Snap cannot generate the high voltage pulse to reactivate the UPDI
+interface if the UPDI pin is configured as GPIO or RESET by configuring the RSTPINCFG
+configuration bits. A different tool will need to be used to do this, such as
+the MPLAB PICkit 4.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc301510412"></a><a
+name="_Toc89412336">2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Other Support</a></h1>
+
+<p class=MsoNormal>See the <a
+href="https://microchiptechnology-my.sharepoint.com/personal/yara_matar_microchip_com/Documents/Dev%20Tools%20-%20Documentation%20-%20Release%20Notes/Readme%20for%20MPLAB%20X%20IDE.htm">Readme
+for MPLAB X IDE.htm</a> for operating system requirements for debugging tools and
+other support information.</p>
+
+<p class=MsoNormal>See the <a
+href="https://microchiptechnology-my.sharepoint.com/personal/yara_matar_microchip_com/Documents/Dev%20Tools%20-%20Documentation%20-%20Release%20Notes/Readme%20for%20MPLAB%20IPE.htm">Readme
+for MPLAB IPE.htm</a> for programming information.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc89412337">3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Reference
+Documents</a></h1>
+
+<p class=MsoNormal>The following documents may be found on our website:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>MPLAB Snap In-Circuit Debugger Online (DS50002787)</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Engineering Technical Note #36 MPLAB Snap AVR UPDI/PDI/TPI
+Interface Modification</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>MPLAB PICkit 4 In-Circuit Debugger Online (DS50002751)</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Development Tools Design Advisory (DS50001764)</p>
+
+<p class=ListBullet2NoSpace style='margin-left:0in;text-indent:0in'>&nbsp;</p>
+
+<p class=ListBullet2NoSpace style='margin-left:0in;text-indent:0in'>MPLAB Snap
+Help may be found under <u>Help&gt;Help Contents and Help&gt;Tool Help
+Contents&gt;MPLAB Snap Help</u>.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc89412338">4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>What's
+New in this Release</a></h1>
+
+<p class=MsoNormal><a name="_Hlk12350670">Nothing.</a></p>
+
+<h1 style='page-break-after:auto'><a name="_Toc190069613"></a><a
+name="_Toc89412339">5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Repairs and Enhancements Made in in this Release</a></h1>
+
+<p class=MsoNormal>None.</p>
+
+<h1><a name="_Hlk506903811"></a><a name="_Toc89412340">6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>USB Port Setup</a></h1>
+
+<p class=MsoNormal>When MPLAB X IDE (v5.05 or greater) is installed the MPLAB Snap
+In-Circuit Debugger will automatically update any necessary device drivers upon
+connecting to USB.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc89412341">7<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Powering
+the Debugger and Target Board</a></h1>
+
+<p class=MsoNormal>The MPLAB Snap debugger derives power via a cable connected
+to the Micro-B USB connector and the computer. The target board must be powered
+from its own supply. </p>
+
+<h1 style='page-break-after:auto'><a name="_Toc89412342">8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Setting
+Up the Debugger and Target Board in MPLAB X IDE</a></h1>
+
+<p class=MsoListNumber style='margin-left:0in;text-indent:0in'><a
+name="_Hlk517359671">To set up the MPLAB X IDE:</a></p>
+
+<p class=MsoListNumber><a name="_Toc146077385"></a><a
+name="_Device_Programming_Considerations"></a>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Launch MPLAB X IDE.</p>
+
+<p class=MsoListNumber>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>In MPLAB X IDE, create or open a project with the debugger selected as
+the Hardware tool. The debugger will automatically connect when code is
+executed. (To always be connected, see <i><u>Tools&gt;Options</u></i>, <b>Embedded</b>,
+<b>Generic Settings</b>, “Maintain active connection to hardware tool”.) Also,
+the debugger can automatically detect if it has been disconnected/reconnected
+and if the target has been disconnected/reconnected.</p>
+
+<p class=MsoListNumber>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The debugger will now be ready for use.</p>
+
+<h1><a name="_Toc89412343"></a><a name="_Ref12955643"></a><a name="_Toc12978648">9<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Virtual
+COM Port</a> for AVR Devices</h1>
+
+<p class=MsoNormal><b>This feature supported on MPLAB X IDE v6.05 and earlier.</b></p>
+
+<p class=MsoNormal>The Virtual COM Port is a general-purpose USB serial bridge
+between a host PC and a target AVR device. </p>
+
+<p class=MsoNormal>The AVR-mode CDC implementation on the MPLAB PICkit4/SNAP
+Virtual COM port supports:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Baud rates in the range 1200 bps to 500kbps</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Only 8-bit character format</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>No hardware flow control</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>One or two stop-bits</p>
+
+<p class=MsoNormal><b>IMPORTANT NOTE:</b> Connecting to the Virtual COM port
+from a terminal emulator will enable pins 7 and 8 on the MPLAB PICkit4/Snap
+header as TX and RX pins. This functionality is independent of the debugger
+functionality. You must ensure that you <b>do not use</b> <b>CDC at the same
+time as a debug interface</b> which also needs those pins, for example JTAG or
+SWD.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc89412344">10<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Known Problems</a></h1>
+
+<p class=MsoNormal>The following is a list of known problems. For information
+on common problems, error messages and limitations please see Troubleshooting
+in the on-line help file for the MPLAB Snap debugger.</p>
+
+<h2 style='page-break-after:auto'><a name="_Hlk506903895">10.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Communications</a></h2>
+
+<p class=MsoNormal>Use a full-featured Micro-B USB cable (data and power), no
+longer than 1.5 meter, to connect to a computer (for example, the Microchip
+Part Number ATUSBMICROCABLE-XPRO). Ensure that the cables you use are USB 2.0
+compliant. If you are using a hub, it must also be High Speed USB 2.0
+compliant.</p>
+
+<h2 style='page-break-after:auto'>10.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>MPLAB Snap Specific Issues</h2>
+
+<p class=MsoNormal>The following is a list of issues that are being tracked for
+this tool.</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=686
+ style='width:7.15in;border-collapse:collapse;border:none'>
+ <thead>
+  <tr style='page-break-inside:avoid'>
+   <td width=92 valign=top style='width:68.65pt;border:solid windowtext 1.0pt;
+   padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif'>Key</span></strong></p>
+   </td>
+   <td width=400 valign=top style='width:300.1pt;border:solid windowtext 1.0pt;
+   border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif'>Summary</span></strong></p>
+   </td>
+   <td width=195 valign=top style='width:146.05pt;border:solid windowtext 1.0pt;
+   border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif'>Device
+   Affected</span></strong></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='page-break-inside:avoid'>
+  <td width=92 valign=top style='width:68.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SNAP-69</p>
+  </td>
+  <td width=400 valign=top style='width:300.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Single stepping through a RESET instruction throws a USB
+  Communication Error on dsPIC33E/dsPIC33C devices</p>
+  </td>
+  <td width=195 valign=top style='width:146.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>dsPIC33E/dsPIC33C</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=92 valign=top style='width:68.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SNAP-62</p>
+  </td>
+  <td width=400 valign=top style='width:300.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Intermittent failures when debugging PIC32CX-BZ.</p>
+  </td>
+  <td width=195 valign=top style='width:146.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC32CX-BZ</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=92 valign=top style='width:68.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SNAP-59</p>
+  </td>
+  <td width=400 valign=top style='width:300.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC32M 4-wire JTAG does not work.</p>
+  </td>
+  <td width=195 valign=top style='width:146.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<h2 style='page-break-after:auto'>10.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>MPLAB Snap Related Issues</h2>
+
+<p class=MsoNormal>The following is a list of issues that are being tracked for
+other tools but are related to this tool.</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=686
+ style='width:7.15in;border-collapse:collapse;border:none'>
+ <thead>
+  <tr style='page-break-inside:avoid'>
+   <td width=92 valign=top style='width:68.65pt;border:solid windowtext 1.0pt;
+   padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif'>Key</span></strong></p>
+   </td>
+   <td width=400 valign=top style='width:300.1pt;border:solid windowtext 1.0pt;
+   border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif'>Summary</span></strong></p>
+   </td>
+   <td width=195 valign=top style='width:146.05pt;border:solid windowtext 1.0pt;
+   border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif'>Device
+   Affected</span></strong></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='page-break-inside:avoid'>
+  <td width=92 valign=top style='width:68.65pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MPLABX-8289</p>
+  </td>
+  <td width=400 valign=top style='width:300.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>During a firmware update of MPLAB Snap ICD PCB revision 2,
+  MPLAB X IDE/MPLAB IPE will experience a ~5 minute delay until a timeout
+  message is displayed.</p>
+  <p class=MsoNormal>Note that the firmware update is successful.</p>
+  </td>
+  <td width=195 valign=top style='width:146.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>See the MPLAB PICkit 4 and other MPLAB hardware tools release
+notes for issues that might relate to this tool.</p>
+
+<h2 style='page-break-after:auto'>10.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Engineering Technical Notes (ETNs)</h2>
+
+<p class=MsoNormal>The following ETNs are related to the MPLAB Snap in-circuit
+debugger. Please see the product webpage for details.</p>
+
+<p class=ListBullet2NoSpace><a name="_Hlk527441924"><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Engineering Technical Note #36 MPLAB Snap AVR </a><a
+name="_Hlk5691687">UPDI/PDI/TPI </a>Interface Modification (see note below)</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc89412345">11<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Important Notes</a></h1>
+
+<h2 style='page-break-after:auto'><a name="_Toc435798197">11.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Checksums</a></h2>
+
+<p class=MsoNormal>Please see the MPLAB X IDE readme for any important updates
+on checksums.</p>
+
+<h2><a name="_Hlk527456508">11.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>AVR UPDI/PDI/TPI Support</a></h2>
+
+<p style='margin-top:7.5pt;margin-right:0in;margin-bottom:0in;margin-left:0in;
+line-height:15.0pt'><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+position:relative;top:-1.5pt'>A 1K ohm pull-up resistor must be installed
+between the MPLAB Snap ICD ICSP connector's (PCB reference designator J4) pin 4
+(PGD) and pin 2 (V<span style='font-variant:small-caps'>dd</span>) to allow
+proper programming/debugging support for AVR parts that support the <a
+name="_Hlk5699565">UPDI/PDI/TPI </a>interface.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;position:relative;
+top:-1.5pt'>Note</span></b><span style='font-size:10.5pt;position:relative;
+top:-1.5pt'>: If this 1K ohm pull-up resistor is not installed a 'PDI physical
+timed out. (25)' message will be issued for various operations in the MPLAB X
+IDE or MPLAB X IPE GUI.</span></p>
+
+<h1 style='page-break-after:auto'><a name="_Toc209841561"></a><a
+name="_Toc219261210"></a><a name="_Toc89412346">12<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Reserved Resources</a></h1>
+
+<p class=MsoNormal>Due to the built-in in-circuit debugging capability of some
+devices, and the ICSP function offered by the debugger, the MPLAB Snap in-circuit
+debugger uses on-chip resources when debugging, i.e., some device resources are
+reserved for use by the debugger. For a list of reserved resources by device
+for the debugger, go to MPLAB X IDE <i><u>Help&gt;Release Notes</u></i>, <b><span
+style='color:black;background:white'>Reserved Resources </span></b><span
+style='color:black;background:white'>section<b><i>.</i></b></span></p>
+
+</div>
+
+</body>
+
+</html>
