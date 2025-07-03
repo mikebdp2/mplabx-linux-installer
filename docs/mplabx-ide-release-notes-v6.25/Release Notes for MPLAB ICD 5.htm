@@ -1,0 +1,1271 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>MPLAB ICD 5 Release Notes</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"MS Shell Dlg";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:normal;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:2.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	margin:0in;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.NormalNoSpace, li.NormalNoSpace, div.NormalNoSpace
+	{mso-style-name:NormalNoSpace;
+	margin:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.ListBullet2NoSpace, li.ListBullet2NoSpace, div.ListBullet2NoSpace
+	{mso-style-name:"List Bullet 2 NoSpace";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+p.HeadingRunIn, li.HeadingRunIn, div.HeadingRunIn
+	{mso-style-name:HeadingRunIn;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	line-height:14.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in .75in 1.0in .75in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=Heading0>Release Notes for MPLAB<sup>®</sup> ICD5<br>
+In-Circuit Debugger &amp; Device (Production) Programmer</p>
+
+<p class=MsoNormal style='margin-bottom:0in'><a name="_Hlk133322965">MPLAB</a><sup><span
+style='font-size:12.0pt'>®</span></sup> X IDE __version__</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>_date_</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>&nbsp;</p>
+
+<p class=Heading0>Table of Contents</p>
+
+<p class=MsoToc1><a href="#_Toc151996673">1<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Device
+Support</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996674">2<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Other
+Support</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996675">3<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Reserved
+Resources</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996676">4<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Reference
+Documents</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996677">5<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>What's
+New in this Release</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996678">6<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Repairs
+and Enhancements Made in this Release</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996679">7<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>USB
+Port Setup</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996680">8<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Powering
+the Debugger and Target Board</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996681">9<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Connecting
+the Debugger to the Target Board/Device</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996682">10<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Setting
+Up the Debugger and Target Board</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996683">11<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Device
+Programming Considerations</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996684">12<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Known
+Problems</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996685">13<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Important
+Notes</a></p>
+
+<p class=MsoToc1><a href="#_Toc151996686">14<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Number
+of Hardware Breakpoints per Device</a></p>
+
+<h1 style='page-break-after:auto'>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><a name="_Ref123024713"></a><a name="_Toc151996673">Device Support</a></h1>
+
+<p class=MsoNormal>Click the link below to see device support for “ICD 5
+Debugging” (ICD5D) and “ICD 5 Programming” (ICD5P).</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://packs.download.microchip.com/DeviceDoc/Device_Support.pdf">Device
+Support List</a></p>
+
+<h2 style='page-break-after:auto'>1.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Programming Considerations</h2>
+
+<p class=NormalNoSpace><a name="_Hlk525804897">See </a><a
+href="#_Device_Programming_Considerations">&quot;Device Programming
+Considerations&quot;</a> for special device programming considerations to avoid
+damage to PIC24F/H and dsPIC33F devices.</p>
+
+<h2 style='page-break-after:auto'>1.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Debugging Considerations</h2>
+
+<p class=MsoNormal>To view <b>debug</b> <b>feature support</b> for a single
+device, go to the Development Tool Selector (DTS):</p>
+
+<p class=MsoListBullet><a href="https://www.microchip.com/dts">https://www.microchip.com/dts</a></p>
+
+<h1 style='page-break-after:auto'><a name="_Toc301510412"></a><a
+name="_Toc151996674">2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Other Support</a></h1>
+
+<p class=MsoNormal>See the <a href="Readme%20for%20MPLAB%20X%20IDE.htm">Readme
+for MPLAB X IDE</a> for operating system requirements for debugging tools and
+other support information.</p>
+
+<p class=MsoNormal>See the <a href="Readme%20for%20IPECMD.htm">Readme for MPLAB
+IPE</a> for programming information.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc209841561"></a><a
+name="_Toc219261210"></a><a name="_Toc151996675">3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Reserved Resources</a></h1>
+
+<p class=MsoNormal>Due to the built-in in-circuit debugging capability of some
+devices, and the ICSP function offered by the debugger, the MPLAB ICD 5 in-circuit
+debugger uses on-chip resources when debugging, i.e., some device resources are
+reserved for use by the debugger<a name="_Hlk526242702">. For a list of
+reserved resources by device for the debugger, go to <i><u>Help&gt;Release
+Notes</u></i> and click on the links under Reserved Resources.</a></p>
+
+<h1 style='page-break-after:auto'><a name="_Toc151996676">4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Reference
+Documents</a></h1>
+
+<p class=MsoNormal>The following documents may be found on our website:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>MPLAB ICD 5 In-Circuit Debugger User's Guide (DS-50003529A)</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>MPLAB ICD 5 In-Circuit Debugger Quick Start Guide (DS-50003438)</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Development Tools Design Advisory (DS-50001764)</p>
+
+<p class=MsoNormal>Content is also available on Developer Help (<a
+href="http://microchipdeveloper.com/">http://microchipdeveloper.com/</a>)</p>
+
+<p class=MsoNormal>At full release of the product, MPLAB ICD 5 Help may be
+found under <a href="https://onlinedocs.microchip.com/">https://onlinedocs.microchip.com/</a>.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc151996677">5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>What's
+New in this Release</a></h1>
+
+<p class=MsoNormal><a name="_Hlk12350670">New part support.</a></p>
+
+<h1 style='page-break-after:auto'><a name="_Toc190069613"></a><a
+name="_Toc151996678">6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Repairs and Enhancements Made in this Release</a></h1>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:-5.8pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=85 valign=top style='width:63.9pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Key</b></p>
+  </td>
+  <td width=370 valign=top style='width:277.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Summary</b></p>
+  </td>
+  <td width=224 valign=top style='width:167.85pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Device Affected</b></p>
+  </td>
+ </tr>
+</table>
+
+<h1><a name="_Hlk506903811"></a><a name="_Toc151996679">7<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>USB
+Port Setup</a></h1>
+
+<p class=MsoNormal>When MPLAB X IDE is installed, the MPLAB ICD 5 will
+automatically update firmware and/or device drivers upon connecting to USB.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc151996680">8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Powering
+the Debugger and Target Board</a></h1>
+
+<p class=MsoNormal><a name="_Hlk499903797"><em><b><span style='font-family:
+"Arial",sans-serif'>Note:</span></b></em> When the MPLAB ICD 5 is connected to
+power, you may hear a high-frequency hum. This is as expected.</a></p>
+
+<p class=MsoNormal>A target board can be powered either from its own supply or
+the MPLAB ICD 5. Supplying power from the debugger requires a PC with type-C
+USB which can provide 3A or a Power over Ethernet (PoE) power supply. Then MPLAB
+ICD 5 will be capable of supplying up to 1A of current to a target board.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc151996681">9<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Connecting
+the Debugger to the Target Board/Device</a></h1>
+
+<p class=HeadingRunIn style='margin-top:2.0pt;margin-right:9.0pt;margin-bottom:
+2.0pt;margin-left:0in;line-height:12.0pt;page-break-after:auto'><span
+style='font-size:10.0pt;font-family:"Arial",sans-serif;color:windowtext;
+font-weight:normal'>There is an adapter board (included) to support
+communication interfaces for PIC, AVR and SAM device.</span></p>
+
+<h1 style='page-break-after:auto'><a name="_Toc151996682">10<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Setting Up the Debugger
+and Target Board</a></h1>
+
+<p class=MsoListNumber style='margin-left:0in;text-indent:0in'>To set up the
+MPLAB X IDE:</p>
+
+<p class=MsoListNumber><a name="_Toc146077385"></a><a
+name="_Device_Programming_Considerations"></a>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Launch MPLAB X IDE.</p>
+
+<p class=MsoListNumber>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>In MPLAB X IDE, create or open a project with the ICD 5 selected as the
+Hardware tool. The debugger will automatically connect when code is executed.
+(To always be connected, see <i><u>Tools&gt;Options</u></i>, <b>Embedded</b>, <b>Generic
+Settings</b>, “Maintain active connection to hardware tool”.) Also, the debugger
+can automatically detect if it has been disconnected/reconnected and if the
+target has been disconnected/reconnected.</p>
+
+<p class=MsoListNumber>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The debugger will now be ready for use.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc151996683">11<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Device Programming
+Considerations</a></h1>
+
+<p class=MsoListNumber><a name="_Hlk499903818"><em><b><span style='font-family:
+"Arial",sans-serif'>Note:</span></b></em> Due to the relays used in the MPLAB ICD
+5, you may hear a clicking sound when erasing or programming a device.</a></p>
+
+<h2 style='page-break-after:auto'>11.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>For CodeGuard™ Security Devices</h2>
+
+<p class=MsoNormal>Several 16-bit devices allow customers to define up to 3
+programming segments:  Boot, Secure and General. The purpose is to allow a
+customer to place proprietary data (libraries, IP address, etc.) into a
+protected boot or secure segment. That customer may then transfer these
+preprogrammed devices to another customer who would use the unprotected general
+segments.</p>
+
+<p class=MsoNormal>For more details on <a
+href="http://www.microchip.com/codeguard">CodeGuard Security</a> functionality,
+please refer to the CodeGuard Security reference manual for 16-bit devices
+(DS70180) and dsPIC33F/PIC24H and dsPIC30F device programming specifications
+found on our website.</p>
+
+<p class=MsoNormal>To program the preprogrammed devices, MPLAB IDE v8.00 and
+above provides a Secure Segment tab on the Settings dialog, accessed under
+either the Programmer or Debugger menu. This tab contains the following
+options:</p>
+
+<p class=MsoListNumber><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Full Chip Erase/Program</p>
+
+<p class=MsoListNumber><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Segment Programming</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Boot, Secure &amp; General Segments</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Secure, General Segments</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>General Segment.</p>
+
+<p class=MsoNormal>The programming function of this tool is now capable of
+identifying various device segments and their sizes upon connecting the device.
+Hence, these options allow you to selectively program the program memory
+segments and thus avoid accidental eraser of preprogrammed proprietary data
+(Libraries, IP, etc.)</p>
+
+<h2>11.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>For
+Non-CodeGuard Security Devices</h2>
+
+<p class=MsoNormal>When programming these devices, bulk erase commands should
+be issued between successive programming operations, i.e., erase, then program,
+then erase, then program, etc. Therefore, Microchip advises against
+multiple-stage programming sessions which may fail to verify. For example, you
+should NOT do the following sequence with these devices:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-top:0in;margin-bottom:0in'>load and program
+     a particular hex file</li>
+ <li class=MsoNormal style='margin-top:0in;margin-bottom:0in'>load a second hex
+     file</li>
+ <li class=MsoNormal style='margin-top:0in;margin-bottom:0in'>disable
+     erase-all-before-programming</li>
+ <li class=MsoNormal style='margin-top:0in;margin-bottom:0in'>specify an
+     address sub-range</li>
+ <li class=MsoNormal style='margin-top:0in;margin-bottom:0in'>program the
+     device</li>
+</ol>
+
+<h2 style='page-break-after:auto'><a name="_Ref22716012">11.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>For AVR devices with
+UPDI using the MPLAB </a>ICD 5</h2>
+
+<p class=MsoNormal><b>NOTE: AVR UPDI high-voltage activation does not work when
+Vdd supplying the AVR is less than 2.8 V (with respect to ground). Affects both
+'Simple High Voltage Pulse' and 'User Power Toggle' High Voltage Activation
+Modes. This limitation will be fixed in a future Tool Pack release to allow AVR
+UPDI high-voltage activation to work all the way down to Vdd minimum of the AVR
+device being used.</b></p>
+
+<p class=MsoNormal>On older, low-pin-count AVR devices with UPDI, the UPDI pin
+can be configured as GPIO or RESET by configuring the RSTPINCFG configuration
+bits. To do further programming, the MPLAB ICD 5 will have to use a high-voltage
+pulse to reactivate the UPDI interface. When using the high-voltage pulse, you
+must make sure that all circuits connected to the UPDI wire can tolerate a
+pulse of at least 12V.</p>
+
+<p class=MsoNormal>In Project Properties, go to the “ICD 5” category,
+“Communications” option category, “High Voltage Activation Mode”.</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=162 valign=top style='width:121.85pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Drop-down menu item</b></p>
+  </td>
+  <td width=486 valign=top style='width:364.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Description</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>No High Voltage</p>
+  </td>
+  <td width=486 valign=top style='width:364.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Default setting.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Simple High Voltage Pulse</p>
+  </td>
+  <td width=486 valign=top style='width:364.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>NOTE: ‘Simple High Voltage Pulse’ is currently not
+  possible when the tool is supplying less than ~2.8 V to the AVR device being
+  used. This limitation will be fixed in a future Tool Pack release.</b></p>
+  <p class=MsoNormal>The tool will try to activate the interface by issuing a
+  high voltage pulse. This procedure is safe if the pin is configured as an
+  input.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.85pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>User Power Toggle</p>
+  </td>
+  <td width=486 valign=top style='width:364.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>NOTE: User power toggle HV entry is NOT supported when
+  the target is powered from the tool.</b></p>
+  <p class=MsoNormal>In this mode the user will be prompted to toggle power on
+  the target device. Once the tool detects that the power returns it will issue
+  a high voltage pulse before the target device pin is configured, making the
+  activation procedure as gentle as possible.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin:0in;background:#F4F5F7'><span
+style='font-size:10.5pt;font-family:"Segoe UI",sans-serif;color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal><b>GPIO vs. UPDI Operation:</b></p>
+
+<p class=MsoNormal>When using a high voltage pulse to reactivate the UPDI
+interface, the reactivation is only temporary, but it will retain the UPDI
+functionality until the next reset. After the next reset, the pin will go back
+to the configuration as specified by the RSTPINCFG configuration bits. To have
+the pin configured as UPDI after a reset, the user will have to change the RSTPINCFG
+configuration bits back to UPDI.</p>
+
+<p class=MsoNormal>It is possible to perform a debug session when the RSTPINCFG
+is configured to GPIO, but the pin will be temporarily configured as UPDI, and
+the pin will not operate as a GPIO pin.</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'><b>SYSCFG0
+RSTPINCFG[1:0] Configuration Bits</b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='page-break-inside:avoid'>
+  <td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'><b>Values</b></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'><b> Function</b></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'>0x0 </p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'>GPIO</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'>0x1 </p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'>UPDI</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'>0x2 </p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'>RESET</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=113 valign=top style='width:85.1pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'>0x3 </p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin:0in;text-autospace:none'>Reserved</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin:0in'>&nbsp;</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc151996684">12<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Known Problems</a></h1>
+
+<p class=MsoNormal>The following is a list of known problems. For information
+on common problems, error messages and limitations please see Troubleshooting
+in the on-line help file for the MPLAB ICD 5 debugger.</p>
+
+<h2 style='page-break-after:auto'><a name="_Hlk506903895"></a><a
+name="_Ref525821668">12.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Communication Issues</a></h2>
+
+<p class=MsoNormal>If you do not use the included cables, make sure the cables
+you do use are: (1) not longer than 6 inches for standard communications or
+errors could result and (2) USB 2.0 compliant if you will be using USB 2.0
+communications. If you are using a hub, it must also be High Speed USB 2.0
+compliant.</p>
+
+<h2 style='line-height:107%;page-break-after:auto'>12.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Firmware Upgrades</h2>
+
+<p class=MsoNormal>The Bootloader currently only supports High speed (no Full
+speed.) Therefore, you must use a High-speed USB port, hub or isolator for any
+IDE/IPE firmware updates to the tool. For Application use, a Full-speed USB
+port, hub or isolator is supported.</p>
+
+<h2><a name="_Ref525821701">12.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Debugging Issues</a></h2>
+
+<p class=MsoNormal>General debugging errors may occur while debugging at higher
+oscillator speeds. Changing to a slower oscillator speed like internal FRC
+without PLL may improve the debug experience.</p>
+
+<h2 style='page-break-after:auto'><a name="_Hlk526244909"></a><a
+name="_Ref195346997">12.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>General Issues</a></h2>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Using the USB connection on a laptop PC with hibernate mode
+enabled will lock up the debugger if hibernate mode is entered. Unplug the USB
+cable from the MPLAB ICD 5 debugger and then plug the cable back in to resume
+debugging. You may want to disable hibernate mode while using the debugger.
+From Control Panel, select &quot;Power Options&quot; and disable hibernate
+mode.</p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Virus protection software can interfere with USB driver
+installation. If your development tool is not operational and you have tried
+reinstalling the USB drivers, consider disabling your virus protection software
+and reinstalling the USB drivers again.</p>
+
+<p class=MsoListBullet style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>SPI001-113:</b> SPI misses SDI input when single-stepping with
+freeze in debug enabled.</p>
+
+<h3 style='page-break-after:auto'><a name="_Hlk526245256">12.4.1<span
+style='font:7.0pt "Times New Roman"'> </span>PIC16(L)F1459 Devices</a></h3>
+
+<p class=MsoNormal>Software Breakpoint functionality will not work on silicon
+revision A2 for the following devices due to the following silicon PFM
+Self-Write errata: PIC16(L)F1454, PIC16(L)F1455, PIC16(L)F1459.</p>
+
+<p class=MsoNormal>Silicon Errata Link:</p>
+
+<p class=MsoBodyText><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/80000546F.pdf">PIC16(L)F1454/1455/1459
+Family Silicon Errata and Data Sheet Clarification</a></p>
+
+<p class=MsoNormal>If MPLAB X IDE outputs 0x1003 for the Device Revision ID
+then you have revision A2 silicon which will not support software breakpoints.</p>
+
+<p class=MsoNormal>Workaround #1: Use revision A5 or higher and MPLAB X IDE v4.00
+or higher.</p>
+
+<p class=MsoNormal>Workaround #2: Use hardware breakpoints.</p>
+
+<h3><a name="_Hlk526860713">12.4.2<span style='font:7.0pt "Times New Roman"'> </span>PIC16XXX
+Devices</a></h3>
+
+<p class=MsoNormal>Possible damage may occur when attempting to program the
+PIC16xxx devices with the MPLAB ICD 5 or MPLAB PICkit 4. Add a 100 ohm resistor
+in series on VPP before attempting to program the part with this tool. This
+part is not recommended for new designs. Devices include:</p>
+
+<p class=MsoNoSpacing>PIC16(L)F628</p>
+
+<p class=MsoNoSpacing>PIC16(L)F627</p>
+
+<p class=MsoNoSpacing>PIC16(L)F84A</p>
+
+<p class=MsoNoSpacing>PIC16(L)F870/871/872/873/874/876/877</p>
+
+<p class=MsoNoSpacing>PIC16F7x/PIC16LF7x</p>
+
+<p class=MsoNormal>Refer to the Silicon Errata Links:</p>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/40300C.pdf">http://ww1.microchip.com/downloads/en/DeviceDoc/40300C.pdf</a>
+under Electrical Specifications section</p>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/80329B.pdf">Timer1 Module
+Data Sheet Errata.pdf</a></p>
+
+<p class=MsoNormal><a
+href="http://ww1.microchip.com/downloads/en/DeviceDoc/80151N.pdf">PIC16F627A/628A/648A
+Rev. A Silicon/Data Sheet Errata.pdf</a></p>
+
+<h3 style='page-break-after:auto'>12.4.3<span style='font:7.0pt "Times New Roman"'>
+</span>PIC18F Devices</h3>
+
+<p class=MsoListBullet><a name="_Toc209841560">Watch window – It will take 1
+cycle for the watch window to update properly for PORTx registers. Use an
+instruction that reads the port such as ‘MOVFF PORTx, PORTx_copy’ before the
+breakpoint is reached. This affects the following devices:</a></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:25.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F4620</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F84J90</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F65J11</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F63J90</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F84J95</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F83J11</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F64J90</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F85J90</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F84J11</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F64J95</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F63J11</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F84J16</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F65J95</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F64J11</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F85J11</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F83J90</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F64J16</p>
+  </td>
+  <td width=127 valign=top style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC18F8722</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoListBullet>For the PIC18F14K22 family, MPLAB X IDE
+debug/programming tools will not work below 1.9v. The work-around is to run the
+device above 1.9v.</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>PIC18F2520 MCUs: Table Read Protect (EBTRx) will not work unless
+Code Protect (CPx) is enabled. Also, once Table Read Protect is enabled, you
+cannot perform a Verify on the protected block.</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>PIC18F45K20/46K20 MCU family: There is a silicon issue that
+prevents some device revisions from being programmed with &quot;power from
+programmer&quot;. The workaround is to use &quot;power from target&quot; OR
+increase the capacitance across VDD, VSS (for example to 47uF.)</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>For PIC18F8720, MEMCON cannot be read if in a microcontroller
+mode. This is a silicon issue.</p>
+
+<p class=MsoNormal>See <u><span
+style='color:blue'>Tool SSRs (System Service Requests)</span></u>.</p>
+
+<h3 style='page-break-after:auto'><a name="_Ref525808894">12.4.4<span
+style='font:7.0pt "Times New Roman"'> </span>dsPIC33EP/PIC24EP Devices</a></h3>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>If there is a Software breakpoint on a function that is in
+     Auxiliary memory, single stepping over that breakpoint may not work
+     properly. </li>
+ <li class=MsoNormal>Verifying Auxiliary memory sometimes will proceed even
+     when verifying Program Memory has failed.</li>
+</ul>
+
+<p class=MsoNormal>See <u><span
+style='color:blue'>Tool SSRs (System Service Requests)</span></u>.</p>
+
+<h3 style='page-break-after:auto'>12.4.5<span style='font:7.0pt "Times New Roman"'>
+</span>PIC24FJ128GA204 Device Family</h3>
+
+<p class=MsoNormal style='margin-right:.5in'>When using MPLAB IPE, IPECMD, or
+MPLAB X IDE, the <span style='color:#333333;background:white'>PIC24FJ128GA204
+family of devices may fail Blank Check upon Erase, although the devices are
+actually blank. This is due to a change in the programming specification for
+these devices for Configuration Word 2 &lt;bit 11&gt;. Ignore the failure of
+the blank check upon erase for these devices when using the MPLAB ICD 5 <a
+name="_Hlk526245905">In-Circuit </a>Debugger, MPLAB ICD3/4 in-Circuit Debugger,
+MPLAB PICkit 3/4 In-Circuit Debugger or MPLAB PM3 Programmer.</span></p>
+
+<h3>12.4.6<span style='font:7.0pt "Times New Roman"'> </span>PIC32 Devices </h3>
+
+<p class=MsoListBullet2 style='margin-left:0in;text-indent:0in'>For devices
+with Deep Sleep Capability: If a device is programmed while in deep sleep, it
+is recommended to power cycle (VDD = 0) after the device is programmed. Failure
+to do so may erroneously set DSFLT status bit (DSWAKE&lt;7&gt;).</p>
+
+<h2 style='page-break-after:auto'><a name="_Hlk89952926"></a><a
+name="_MPLAB_ICD_5"></a>12.5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>MPLAB ICD 5 Specific Issues</h2>
+
+<p class=MsoNormal>The following is a list of issues that are being tracked for
+this tool.</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=125 valign=top style='width:94.1pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Key</b></p>
+  </td>
+  <td width=322 valign=top style='width:241.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Summary</b></p>
+  </td>
+  <td width=322 valign=top style='width:241.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Device Affected</b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2 style='page-break-after:auto'><a name="_MPLAB_ICD_5_1"></a>12.6<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>MPLAB ICD 5 Related
+Issues</h2>
+
+<p class=MsoNormal>The following is a list of issues that are being tracked for
+other tools but are related to this tool.</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=125 valign=top style='width:94.1pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Key</b></p>
+  </td>
+  <td width=322 valign=top style='width:241.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Summary</b></p>
+  </td>
+  <td width=224 valign=top style='width:167.85pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Device Affected</b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2 style='page-break-after:auto'><a name="_Ref525821726">12.7<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Engineering Technical
+Notes (ETNs)</a></h2>
+
+<p class=MsoNormal>The following ETNs are related to the MPLAB ICD 5 in-circuit
+debugger. Please see the product webpage for details.</p>
+
+<p class=MsoNormal>None.</p>
+
+<h1 style='page-break-after:auto'><a name="_Toc151996685"></a><a
+name="_Live-Connect_–_Resetting"></a><a name="_SWO_Trace_–"></a>13<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Important Notes</h1>
+
+<h2 style='page-break-after:auto'><a name="_Hlk526246296">13.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Code Protect</a></h2>
+
+<p class=MsoListBullet>Make sure that table reads/writes are not code protected.</p>
+
+<p class=MsoListBullet>At low VDD, bulk erase will not erase code protect bits.</p>
+
+<h2 style='page-break-after:auto'><a name="_Toc435798197">13.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Checksums</a></h2>
+
+<p class=MsoNormal>Checksums may not be stable on devices under Yellow (Beta)
+support.</p>
+
+<p class=MsoNormal>Please see the MPLAB X IDE readme for any important updates
+on checksums.</p>
+
+<h2 style='page-break-after:auto'>13.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>PIC18 Devices</h2>
+
+<p class=MsoNormal>Before setting the Stopwatch between any 2 Software
+breakpoints, ensure that the total number of Hardware breakpoints being used is
+always 2 less than the maximum number of Hardware breakpoints available for the
+device.</p>
+
+<h2 style='page-break-after:auto'>13.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>16-Bit Devices</h2>
+
+<p class=MsoListNumber>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>RB0 and RB1 pins:<br>
+If the MPLAB ICD 5 debugger is selected as a debugger, it initializes all the
+A/D input pins - AN0 (RB0) through AN15 (RB15) pins - as &quot;digital&quot;
+pins, by setting all 16 bits in the ADPCFG register.</p>
+
+<ol style='margin-top:0in' start=1 type=a>
+ <li class=MsoNormal>If you have selected a pair of &quot;debug pins&quot;
+     (EMUD/EMUC, EMUD1/EMUC1, EMUD2/EMUC2 or EMUD3/EMUC3) that are multiplexed
+     with A/D input pin functions on the particular dsPIC30f device being used,
+     then you must never clear the bits in the ADPCFG register that correspond
+     to those A/D pins. </li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.5in'>For example, if EMUD3 and EMUC3 are
+used as the debug pins on a dsPIC30F2010 device, then bits 0 and 1 of the
+ADPCFG register must remain set at all times. Similarly, if EMUD and EMUC are
+used as the debug pins on a dsPIC30F5011 device, then bits 6 and 7 of the
+ADPCFG register must remain set at all times. In such cases, you must also take
+proper precaution to isolate the application circuitry from the corresponding
+A/D pins during debugging.</p>
+
+<ol style='margin-top:0in' start=2 type=a>
+ <li class=MsoNormal>If your application needs to use certain A/D pins as
+     analog input pins, then your code must clear the corresponding bits in the
+     ADPCFG register during A/D module initialization.</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.5in'>For example, if AN4 and AN5 are
+required as analog input pins, then bits 4 and 5 of the ADPCFG register must be
+cleared.</p>
+
+<p class=MsoListNumber>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>SLEEP, IDLE, WDT, Clock Switching:<br>
+For dsPIC devices, debug operations can be executed on programs which use SLEEP
+or IDLE mode, Watchdog Timer, and/or Clock Switching. </p>
+
+<p class=MsoListNumber>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Debug during SLEEP or IDLE Mode:<br>
+When the device is in SLEEP and IDLE mode and a Halt command is issued, the
+MPLAB ICD 5 debugger will wake up the device and halt execution on the
+instruction immediately following the PWRSAV instruction.</p>
+
+<p class=MsoListNumber>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Interrupts:</p>
+
+<ol style='margin-top:0in' start=1 type=a>
+ <li class=MsoNormal>In general, single-stepping an instruction will not
+     generate an interrupt or trap, because the corresponding interrupt/trap
+     status flag bit would not get set. Essentially, the interrupt or trap
+     condition would be ignored.</li>
+ <li class=MsoNormal>However, if the user has explicitly set an interrupt/trap
+     flag bit, either in the user program or by modifying the status flag
+     values in the MPLAB Watch, SFR or File Registers window, then the
+     interrupt/trap would get generated, and the user would be able to
+     single-step into the Interrupt or Trap Service Routine.</li>
+</ol>
+
+<p class=MsoListNumber>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Break Point Behavior:<br>
+If a break point is set on an instruction that follows a taken branch, the
+Breakpoint will be triggered even though the branch went elsewhere.</p>
+
+<p class=MsoListNumber>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Break Point Behavior and Skidding:<br>
+It is possible that a breakpoint halt will exhibit program memory skidding in
+that the execution stops N instructions after reaching the breakpoint. The
+following definitions are provided and referred to:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>One skid - A breakpoint occurs AFTER the instructions is executed
+(PC+2)</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Two skid - A break point occurs AFTER the NEXT instruction (PC+4)
+</p>
+
+<p class=MsoNormal style='margin-left:.25in'>Break Point Behavior:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If a Non-Program-Flow, modifying, Single-Word, Two-Cycle
+instruction (such as Table or PSV) precedes a break point instruction, then the
+breakpoint occurs BEFORE the instruction at the breakpoint address is executed
+(ONE SKID).</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>All other instructions have a &quot;TWO SKID&quot;, which means
+the break occurs AFTER the NEXT instruction is executed.</p>
+
+<p class=MsoListNumber>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The CAN module, unlike the other peripherals, does not get frozen in the
+following situations:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>during a Halt </p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>during a stop on a Breakpoint</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>after a Single-Step </p>
+
+<p class=MsoNormal style='margin-left:.25in'>For example, if you set a
+Breakpoint and run to it, the CAN module continues to run in the background,
+and it may seem that data transmissions and receptions have completed
+immediately.</p>
+
+<p class=MsoListNumber>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>DISICNT register:<br>
+In five dsPIC30F devices (dsPIC30F6010, dsPIC30F6011, dsPIC30F6012,
+dsPIC30F6013 and dsPIC30F6014), since the DISICNT register continues to
+decrement even when the device is halted by the debugger, the DISICNT value
+will always be seen as 0x0000 in the Watch, SFR and File Registers windows. To
+monitor the DISICNT value, add code to copy the DISICNT register contents to a
+W register or memory location and monitor the value of the corresponding W register
+or memory location in the Watch, SFR or File Registers window.</p>
+
+<p class=MsoListNumber>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ADCMD bit in PMD1 register:<br>
+The user application must not set the ADCMD bit (bit 0 of PMD1 register). This
+would lead to incorrect ICE operation.</p>
+
+<p class=MsoListNumber>10.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span>SPLIM
+register:<br>
+When using the MPLAB ICD 5 debugger as a debugger, your software must
+initialize the Stack Pointer Limit register (SPLIM) before using the stack
+(device errata).</p>
+
+<p class=MsoListNumber>11.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span>Single-stepping
+a DO loop:<br>
+In five dsPIC30F devices (dsPIC30F6010, dsPIC30F6011, dsPIC30F6012,
+dsPIC30F6013 and dsPIC30F6014), single-stepping through a DO loop in dsPIC30F
+assembly code results in the loop getting executed one less time than expected.</p>
+
+<p class=MsoListNumber>12.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span>Pass
+Counter feature in Advanced Breakpoints:<br>
+For a specified Pass count of 'N', the code will break after 'N+1' occurrences
+of the breakpoint instead of 'N' occurrences.</p>
+
+<p class=MsoListNumber>13.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span>If
+you need to use the Fail-Safe Clock Monitor feature on a dsPIC device when
+using the MPLAB ICD 5 debugger for debugging your application, a Watchdog Timer
+Device Reset will occur, even if the Watchdog Timer has not been explicitly
+enabled in the application. To work around this issue, use the
+&quot;CLRWDT&quot; instruction in the main loop of your application code. This
+will ensure that the Watchdog Timer gets cleared before it causes the device to
+reset.</p>
+
+<p class=MsoListNumber>14.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span>For
+PIC16F616 devices, the MPLAB ICD 5 does not row erase the device below 4.5V.  A
+bulk erase will be required which must take place with VDD above 4.5V. (ICE3-125)</p>
+
+<h2 style='page-break-after:auto'>13.5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>32-Bit Devices</h2>
+
+<p class=MsoNormal>None.</p>
+
+<h1 style='page-break-after:auto'><a name="_Hlk526246317"></a><a
+name="_Toc209841562"></a><a name="_Toc219261211"></a><a name="_Toc525808082"></a><a
+name="_Toc151996686">14<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Number
+of Hardware Breakpoints per Device</a></h1>
+
+<p class=MsoNormal>To see the number of breakpoints supported for your device
+and the number of breakpoints used in your project, use the Dashboard window (<i><u>Window&gt;Dashboard</u></i>).</p>
+
+<p class=MsoNormal>To see breakpoint information for all supported devices, use
+either:</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="FeatureSupport/HWToolDebugFeatures.html">Hardware Tool
+Debug Features by Device</a> – local HTML file</p>
+
+<p class=MsoNormal><b>Note:</b> For PIC18FxxJ devices, there is a limitation
+that only 1 data capture is available.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

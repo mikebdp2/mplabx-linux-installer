@@ -1,0 +1,161 @@
+<html>
+<head><title>Hardware Tool Debug Features Table - Heading Descriptions</title></head>
+<body style="font-family:sans-serif; font-size:10pt" bgcolor="#FFFFE0">
+
+<h1>Hardware Tool Debug Features Table - Heading Descriptions</h1>
+
+<table style="font-family: sans-serif; font-size: 10pt;" border=1 cellspacing=5 cellpadding=5 width="75%">
+
+  <tr bgcolor="#A8C6FD">
+    <th>Tool<br>Support*</th>
+    <th>Feature</th>
+    <th>Feature Description**</th>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td rowspan="4"><b>ICE4,<br>ICD5,<br>ICD4,<br>PK5,<br>PK4,<br>Snap,<br>PKB,<br>AI</b></td>
+    <td><b>Device</b></td>
+    <td>Device has current release support in MPLAB<sup>®</sup> X IDE.</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>Prog BPs</b></td>
+    <td>Maximum number of Program Memory breakpoint resources.<br>
+    X: Maximum number of program breakpoints. (<b>Note:</b> For some devices, resources are shared.)<br>
+    X + YSP: X breakpoints + Y simple breakpoints.
+    </td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>Data BPs</b></td>
+    <td>Maximum number of Data Memory breakpoint resources.<br>
+    X: Maximum number of data breakpoints. (<b>Note:</b> For some devices, resources are shared.)
+    </td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>Data BP Access</b></td>
+    <td>Break on data fetch, data write or either data fetch or write.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td rowspan="14"><b>ICE4,<br>ICD5,<br>ICD4,<br>PK5,<br>PK4,<br>Snap,<br>PKB</b></td>
+    <td><b>Tuples (ANDed BPs)</b></td>
+    <td>Maximum number of Tuples (ANDed breakpoints). A tuple consists of one program memory breakpoint
+    ANDed with one data memory breakpoint.
+    Breakpoint 1 AND breakpoint 2 must occur at the same time before a program halt.
+    </td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Sequenced BPs</b></td>
+    <td>Maximum number of sequences and sequenced breakpoints.<br>
+    XS/YBPS: X is the maximum number of a breakpoint sequences (S). Y is the maximum number of breakpoints (BPS) in a sequence.<br>
+    A breakpoint sequence is a list of breakpoints that execute but do not halt until the last breakpoint is executed.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Range BPs</b></td>
+    <td>Break on a range of program or data memory addresses.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Table R/W BPs</b></td>
+    <td>Break on a table read or write.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Pass Counter</b></td>
+    <td>Break after a specified number of passes occur, specified by a counter.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Clock Switch Break</b></td>
+    <td>Break on clock switching</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Sleep Wake Break</b></td>
+    <td>Break on wake from Sleep</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Stack Over/Under Break</b></td>
+    <td>Break on stack overflow/underflow</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>WDT Timeout Break</b></td>
+    <td>Break on Watchdog Timer timeout</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Stopwatch</b></td>
+    <td>Use the stopwatch with breakpoints to time code execution.
+    Stopwatch uses 1-2 breakpoint resources.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Debug Reads</b></td>
+    <td>Read values on program execution halt.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Runtime BPs</b></td>
+    <td>Runtime breakpoint support; Add breakpoints on program execution halt.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>SW BPs</b></td>
+    <td>Software Breakpoints support.</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><b>Live Connect</b></td>
+    <td>Live Connect Debug. <br>
+    After connecting to a running target,
+    select “Live Connect Debug” from the toolbar Debug button
+    drop-down list to begin a debug session and halt.</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td rowspan="9"><b>ICE4,<br>ICD5</b></td>
+    <td><b>Data Capture</b></td>
+    <td>Non-trace data capture resources.<br>
+    X: Maximum number of data captures. (<b>Note:</b> For some devices, resources are shared.)</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>Runtime Watch</b></td>
+    <td>Watch values that change during run.<br>
+    X: Maximum number of runtime watches. (<b>Note:</b> For some devices, resources are shared.)</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>Native Trace</b></td>
+    <td>Instrumented Trace: Use TRACE() and LOG() macros to report program locations or variable values.
+    Compiler support required.</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>Port Trace</b></td>
+    <td>Instrumented Trace: Use TRACE() and LOG() macros to report program locations or variable values.
+    Compiler support required. Requires a device port.</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>SPI Trace</b></td>
+    <td>Instrumented Trace: Use TRACE() and LOG() macros to report program locations or variable values.
+    Compiler support required. Requires available pins.</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>ITM/SWO</b></td>
+    <td>Instrumented Trace Module and Serial Wire Output (Selected ARMv7 MCUs).</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>PIC32 Instruction Trace</b></td>
+    <td>Hardware Instruction Trace: Selected PIC32 MCUs.</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>PC Profiling</b></td>
+    <td>Percent time spent in a function - 32-bit devices.</td>
+  </tr>
+  <tr bgcolor="#E0E0E0">
+    <td><b>PC Sampling</b></td>
+    <td>Percent time spent in a function - 16-bit devices.</td>
+  </tr>
+  <tr bgcolor="FFFFFF">
+    <td colspan="3">
+    * ICE4 = MPLAB® ICE 4 In-Circuit Emulator; <br>
+    ICD5 = MPLAB ICD 5 In-Circuit Debugger; <br>
+    ICD4 = MPLAB ICD 4 In-Circuit Debugger; <br>
+    PK5 = MPLAB PICkit 5 In-Circuit Debugger; <br>
+    PK4 = MPLAB PICkit 4 In-Circuit Debugger; <br>
+    Snap = MPLAB Snap In-Circuit Debugger; <br>
+    PKB = MPLAB PICkit™ Basic In-Circuit Debugger; <br>
+    AI = Atmel-ICE Debugger.<br>
+    ** See your tool documentation (PDF or Help file) for details on debug features.
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

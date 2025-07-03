@@ -7,6 +7,9 @@ https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/
 https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v6.20-linux-installer.tar
 cecefb0acb8a154086630522bf86592e6f0764bb24c66df33fc1e818c5077560  ./MPLABX-v6.20-linux-installer.tar
 
+https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v6.25-linux-installer.tar
+ed015d1f0c79c2769b5844d5f923b838d277d281858a1f0123b02901f9c991ad  ./MPLABX-v6.25-linux-installer.tar
+
 The provided archives have been split into multiple parts for this GitHub.
 To get the archive, run ./join_parts.sh while being at the same directory:
 this script will make an archive from its parts and also check a sha256sum

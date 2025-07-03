@@ -1,0 +1,852 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>MPLAB X Simulator Release Notes</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"MS Shell Dlg";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@Batang";
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+p.Heading0, li.Heading0, div.Heading0
+	{mso-style-name:"Heading 0";
+	margin:0in;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in .75in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=Heading0><a name="OLE_LINK3"></a><a name="OLE_LINK4">Release Notes for
+MPLAB</a><sup><span style='font-size:13.0pt'>®</span></sup> X Simulator</p>
+
+<p class=MsoNormal style='margin-bottom:0in'>MPLAB<sup><span style='font-size:
+12.0pt'>®</span></sup> X IDE v6.25</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>February 28, 2025</p>
+
+<p class=MsoNormal style='margin:0in;text-autospace:none'>&nbsp;</p>
+
+<p class=Heading0>Table of Contents</p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc84861081">1<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Device Support</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc84861082">2<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Device Core and Peripheral
+Support</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc84861083">3<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>IDE Support</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc84861084">4<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Debug Support</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc84861085">5<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Documentation Updates</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc84861086">6<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>What's New in this release</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc84861087">7<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Repairs and Enhancements
+Made in this release</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc84861088">8<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Known Problems</a></span></span></p>
+
+<h1>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><a name="_Toc84861081">Device Support</a></h1>
+
+<p class=MsoNormal>Click the link below to see device support for the simulator
+(SIM).</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://packs.download.microchip.com/DeviceDoc/Device_Support.pdf">Device
+Support List</a></p>
+
+<h1><a name="_Toc84861082">2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Device Core and Peripheral Support</a></h1>
+
+<p class=MsoNormal>Although a device may show as supported in the Simulator, be
+aware that some features are not supported in the simulator.</p>
+
+<h3>2.1.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Core
+Support – PIC32 MCUs</h3>
+
+<p class=MsoNormal style='margin-right:16.2pt'>The following features aren’t
+simulated for the PIC32MX Core:</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Prefetch cache</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>PB Clock divider</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Bus matrix configurations</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Flash wait states</p>
+
+<p class=MsoNormal>ADC operates on PB Clock, which is CPU clock/PBDIV. For
+other peripherals, PB Clock is the same as CPU Clock.</p>
+
+<p class=MsoNormal>For additional information on core support for these devices,
+see the MPLAB X Simulator Help and Known Problems below.</p>
+
+<h3>2.1.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Core
+Support – Other Devices</h3>
+
+<p class=MsoNormal>For information on core support for other device families,
+see the MPLAB X Simulator Help and Known Problems below.</p>
+
+<h3>2.1.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Peripheral
+Support</h3>
+
+<p class=MsoNormal>For information on <b>peripheral support</b> for device
+families, see:</p>
+
+<p class=MsoNormal><a href="FeatureSupport/SimPeripheralSupport.html">Simulator
+Peripheral Support by Device</a></p>
+
+<h1><a name="_Toc84861083">3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IDE Support</a></h1>
+
+<p class=MsoNormal><b>MPLAB X IDE v5.40</b> is now a <b>64-bit application</b>
+and 64-bit operating systems are required for using MPLAB X IDE. </p>
+
+<p class=MsoNormal>See the <a href="Readme%20for%20MPLAB%20X%20IDE.htm">Readme
+for MPLAB X IDE.htm</a> for IDE support information.</p>
+
+<h1><a name="_Toc84861084">4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Debug Support</a></h1>
+
+<p class=MsoNormal>To view <b>debug</b> <b>feature support</b> for multiple
+devices, go to:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><a href="FeatureSupport/SimDebugFeatures.html">Simulator
+     Debug Features by Device</a></li>
+</ul>
+
+<h1><a name="_Toc84861085">5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Documentation Updates</a></h1>
+
+<p class=MsoNormal>MPLAB X Simulator User’s Guide/Help – The following updates
+will be added to the user’s guide when it is updated.</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>The simulator does not support virtual ports.</li>
+ <li class=MsoNormal>On the Stimulus tabbed window, enter data and then click
+     the round green button in the top left corner to apply/remove (toggle) your
+     changes. Text will appear on the bottom of the window to show the action.</li>
+</ul>
+
+<h1><a name="_Toc84861086">6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>What's New in this release</a></h1>
+
+<p class=MsoNormal>New device support.</p>
+
+<h1 style='margin-right:16.2pt'><a name="_Toc84861087">7<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Repairs and Enhancements Made in this release</a></h1>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>SSR</b></p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Description</b></p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Device Affected</b></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<h1 style='margin-right:16.2pt'><a name="_Toc84861088">8<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Known Problems</a></h1>
+
+<p class=MsoNormal style='margin-right:16.2pt'>The following is a list of known
+problems. For information on common problems, error messages and limitations
+please see Troubleshooting in the online help file for the Simulator.</p>
+
+<h2 style='margin-right:16.2pt'>8.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Cycle Accuracy Issues - PIC32 MCUs </h2>
+
+<p class=MsoNormal style='margin-right:16.2pt'>At this time the PIC32 simulator
+has some variations in cycle accuracy when compared to the real silicon. The
+PIC32 simulator does not simulate things like the cache, pre-fetch buffer, wait
+states and Bus matrix divisions. The Bus matrix is fixed at 1:1 with the
+processor clock. This can have an effect of making algorithm timing loops
+appear to be slower than they are in real silicon. Each instruction is accurate
+in execution and timing in itself.</p>
+
+<h2>8.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Issues Being Tracked</h2>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <thead>
+  <tr style='page-break-inside:avoid'>
+   <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+   padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal><b>SSR</b></p>
+   </td>
+   <td width=312 valign=top style='width:3.25in;border:solid windowtext 1.0pt;
+   border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal><b>Description</b></p>
+   </td>
+   <td width=259 valign=top style='width:2.7in;border:solid windowtext 1.0pt;
+   border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+   <p class=MsoNormal><b>Device Affected</b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1951</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>The simulator does not support virtual ports.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1322, SIMX-1321, SIMX-1319</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>These devices implement a new style of several peripherals
+  that the simulator doesn't model yet, such as PWM, DMA, ADC.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>ATSAM</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1314</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MCP19132/3 Missing CLC. The simulator does not currently
+  support the CLC for this device.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MCP19132/3</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1312</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MCP19132/3 Missing CCP. This device uses a new style of
+  CCP peripheral that the simulator doesn't model yet.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MCP19132, MCP19133</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1311</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MCP19132 Missing ADC. This device implements a new style
+  of ADC that the simulator doesn't model yet.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MCP19132</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1309</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC16F18325 TMR1 not working when clock source is
+  LFINTOSC. Using LFINTOSC as clock source for Timer1/3/5 will not work. Timer
+  will never increment.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC16F18325</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1269</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Error &quot;E0108-SIM: Failed simulator operation:
+  java.lang.ArrayIndexOutOfBoundsException&quot; stops the Simulator while
+  performing 'Step-In' in the code. This error happens for any instruction, any
+  processor, that accesses an illegal memory location. The error clearly
+  identifies the line causing the issue.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC16F1704</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1229</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Simulator does not have DUAL CAPTURE/COMPARE (CCD)
+  peripheral in MCP19114/5.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>MCP19114/5</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1169</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>These devices implement a new style of DMA that the
+  simulator has not modeled yet.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC18(L)F2x/4x/5xK42</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1162</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Timer0 in PIC16(L)F18313/18323 can only select T0CKIPPS,
+  inverted T0CKIPPS, and FOSC/4 for clock source; the rest of the clock source
+  selections are not implemented yet. There is also a 2 cycle off counting
+  issue when TMR0L is written.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC16(L)F18313/18323</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1142</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Advanced PIC16F PPS peripheral may not work correctly for
+  bidirectional pins.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC16F</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1123</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>The new dsPIC33CH CRC has a MOD bit for CRC Calculation
+  Mode which is not implemented yet.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>dsPIC33CH128RA502/3/5/6/8</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-1089</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>When a timer overflow is selected as an auto-conversion
+  trigger for the ADC, nothing happens. The ADC seems to function properly
+  otherwise.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC16(L)F161x</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-947</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>The PIC16(L)F188x5 devices have new ADCs that have not
+  been modeled by the simulator.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC16(L)F188x5</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-918</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>The simulation of PIC24F DMA does not handle Peripheral
+  Indirect mode correctly.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC24F</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-846</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>The simulator does not model the PIC32 cache.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC32</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-837</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Simulator does not support the CRC calculation feature of
+  the DMA. It does support the rest of the DMA operations however.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC32</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-643</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Flash erase operation on certain unprotected memory regions
+  is not working for PIC32MX1xx/2xx.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC32MX1xx/2xx</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-525</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>[SIMX IO Pin Window] All signal names, under owner column,
+  are in bold format instead of just the owner signal made bold for
+  non-remappable signals in Ubuntu 12.10. This is caused by bad fonts. To
+  remove these bad fonts, use the following command:<br>
+  <span style='font-size:9.0pt;font-family:"Courier New"'>sudo apt-get remove
+  fonts-unfonts-core</span></p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-517</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Invalid pin names appear for midrange device with
+  alternate pin functions.</p>
+  <p class=MsoNormal>Some 8-bit devices implement alternate pin functionality.
+  The pin diagram will show the same signal (e.g. &quot;P2A&quot;) on two
+  different physical pins, and a register, typically APFCON, is used to specify
+  which physical pin the signal is currently mapped to. The simulator needs a
+  way to distinguish between the two instances of the signal, so it renames the
+  signals by adding the associated APFCON field value to the signal name, (e.g.
+  &quot;P2A0&quot;, &quot;P2A1&quot;). A side effect is that the renamed
+  signals will appear in the pin list in the simulator's pin dialog. These
+  modified signal names can be safely ignored.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>8-bit devices</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-512</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>The ADC is not simulated for the PIC18F97J94 family.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC18F97J94 family</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-412</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SCL error messages are sometimes indicated to be on lines
+  beyond the actual line the error occurred on as the parser sometimes needs to
+  process more tokens before the error is detected.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-330</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>No interrupt for DMA Controller Trap Handler.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>dsPIC33F/PPS, PIC24H/PPS</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-318</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>setm ACCAU sets all 16 bits when using the 16-bit
+  simulator. Instead only lower 8 bits of ACCAU should be set.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>dsPICC33FJ256GP710</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=91 valign=top style='width:.95in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>SIMX-128</p>
+  </td>
+  <td width=312 valign=top style='width:3.25in;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Flash erase does not work correctly or as expected in
+  PIC24FxxKA devices.</p>
+  </td>
+  <td width=259 valign=top style='width:2.7in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>PIC24FxxKA</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!-- Procedure -->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/normal.css"/>
+		<title>SCL User's Guide</title>
+	</head>
+	<h2>Procedure</h2>
+	<body>
+		<p>
+			SCL offers limited code reusability via the procedure construct.  Procedures can be inserted in processes, and then
+			may be called from within the process body.  At this time procedures cannot take parameters.
+		</p>
+		<p>
+			Here is the basic syntax of a procedure.
+		</p>
+		<code>
+			<pre class="precode">process is</pre>
+			<pre class="precode">   procedure procName() is</pre>
+			<pre class="precode">       begin</pre>
+			<pre class="precode">       <i>//procedure statements go here</i></pre>
+			<pre class="precode">       end procedure procName;</pre>
+			<pre class="precode">   begin                <i>//begin process body</i></pre>
+			<pre class="precode">   procName();          <i>//call to procedure</i></pre>
+			<pre class="precode">   end process;</pre>
+		</code>
+		<p>
+			Here is a more concrete example:
+		</p>
+		<code>
+			<pre class="precode">process is</pre>
+			<pre class="precode">   procedure HitSwitch() is</pre>
+			<pre class="precode">       begin</pre>
+			<pre class="precode">       RD1 <= '1';\n    <i>//user button on pin RD1</i></pre>
+			<pre class="precode">       end procedure procName;</pre>
+			<pre class="precode">   begin</pre>
+			<pre class="precode">   HitSwitch();         <i>//simulate user hitting the switch</i></pre>
+			<pre class="precode">   end process;</pre>
+		</code>
+	</body>
+</html>
